@@ -49,7 +49,7 @@ I may consider switching from a numpad layout to a 2x 4-finger numrow in an atte
 As standard on all Glove80 keyboards, a Magic layer provider access to system utilities, such as Bluetooth settings and RGB lighting config.
 
 ![Magic Layer](img/glove80_magic.svg)
- 
+
 ## Setup
 
 ### Flashing Firmware
@@ -148,7 +148,6 @@ When tapping the `Magic` key, status indicators will appear on the Bluetooth key
   <strong>Not paired</strong>
 </p>
 
-
 #### Pairing
 
 - First ensure the profile is unpaired (white status LED)
@@ -159,8 +158,8 @@ When tapping the `Magic` key, status indicators will appear on the Bluetooth key
 
 Unpair the selected Bluetooth profile using the `BT_Clear` key (see [magic layer] above). Alternatively unpair all devices using `BT_Clear_All`.
 
-
 ## Resources
+
 - [@nickcoutsos]'s [Keymap Editor] ([webapp](https://nickcoutsos.github.io/keymap-editor)).
 - [@caksoylar]'s [Keymap Drawer].
 
