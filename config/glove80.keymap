@@ -352,6 +352,7 @@ macros {
         //           <&macro_release &kp RALT>;
         // };
 
+
         bt_0: bt_profile_macro_0 {
             label = "BT_0";
             compatible = "zmk,behavior-macro";
