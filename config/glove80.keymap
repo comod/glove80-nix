@@ -4,260 +4,64 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-// German umlauts and special characters
+// German umlauts and special characters >
 #define DE_ESCAPE_CHARACTER (LC(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
-
 #define DE_FILE_SEPARATOR (LC(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))
-
 #define DE_GROUP_SEPARATOR (LC(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
-
 #define DE_SPACE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SPACEBAR))
-
-/* ! */
 #define DE_EXCLAMATION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))
-
-/* " */
 #define DE_DOUBLE_QUOTES (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
-
-/* # */
 #define DE_HASH (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE))
-
-/* $ */
 #define DE_DOLLAR (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR)))
-
-/* % */
 #define DE_PERCENT (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))
-
-/* & */
 #define DE_AMPERSAND (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET)))
-
-/* ' */
 #define DE_SINGLE_QUOTE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))
-
-/* ( */
 #define DE_LEFT_PARENTHESIS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))
-
-/* ) */
 #define DE_RIGHT_PARENTHESIS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
-
-/* * */
 #define DE_ASTERISK (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
-
-/* + */
 #define DE_PLUS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))
-
-/* , */
 #define DE_COMMA (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))
-
-/* - */
 #define DE_MINUS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))
-
-/* . */
 #define DE_PERIOD (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN))
-
-/* / */
 #define DE_SLASH (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))
-
-/* 0 */
 #define DE_N0 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))
-
-/* 1 */
 #define DE_N1 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION))
-
-/* 2 */
 #define DE_N2 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT))
-
-/* 3 */
 #define DE_N3 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH))
-
-/* 4 */
 #define DE_N4 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR))
-
-/* 5 */
 #define DE_N5 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))
-
-/* 6 */
 #define DE_N6 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET))
-
-/* 7 */
 #define DE_N7 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))
-
-/* 8 */
 #define DE_N8 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK))
-
-/* 9 */
 #define DE_N9 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS))
-
-/* : */
 #define DE_COLON (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))
-
-/* ; */
 #define DE_SEMICOLON (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN)))
-
-/* < */
 #define DE_LESS_THAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
-
-/* = */
 #define DE_EQUAL (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))
-
-/* > */
 #define DE_GREATER_THAN (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
-
-/* ? */
 #define DE_QUESTION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
-
-/* @ */
 #define DE_AT_SIGN (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))
-
-/* [ */
 #define DE_LEFT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))
-
-/* \ */
 #define DE_BACKSLASH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
-
-/* ] */
 #define DE_RIGHT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
-
-/* ^ */
 #define DE_CARET (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))
-
-/* _ */
 #define DE_UNDERSCORE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK)))
-
-/* ` */
 #define DE_GRAVE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))
-
-// /* a */
-// #define DE_A (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_A))
-//
-// /* b */
-// #define DE_B (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_B))
-//
-// /* c */
-// #define DE_C (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C))
-//
-// /* d */
-// #define DE_D (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_D))
-//
-// /* e */
-// #define DE_E (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_E))
-//
-// /* f */
-// #define DE_F (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_F))
-//
-// /* g */
-// #define DE_G (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_G))
-//
-// /* h */
-// #define DE_H (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_H))
-//
-// /* i */
-// #define DE_I (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_I))
-//
-// /* j */
-// #define DE_J (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_J))
-//
-// /* k */
-// #define DE_K (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_K))
-//
-// /* l */
-// #define DE_L (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_L))
-//
-// /* m */
-// #define DE_M (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_M))
-//
-// /* n */
-// #define DE_N (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_N))
-//
-// /* o */
-// #define DE_O (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_O))
-//
-// /* p */
-// #define DE_P (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_P))
-//
-// /* q */
-// #define DE_Q (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q))
-//
-// /* r */
-// #define DE_R (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_R))
-//
-// /* s */
-// #define DE_S (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_S))
-//
-// /* t */
-// #define DE_T (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_T))
-//
-// /* u */
-// #define DE_U (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_U))
-//
-// /* v */
-// #define DE_V (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_V))
-//
-// /* w */
-// #define DE_W (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_W))
-//
-// /* x */
-// #define DE_X (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_X))
-
-/* y */
 #define DE_Y (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Z))
-
-/* z */
 #define DE_Z (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Y))
-
-/* { */
 #define DE_LEFT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))
-#define DE_LBRC (DE_LEFT_BRACE)
-
-/* | */
 #define DE_PIPE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
-
-/* } */
 #define DE_RIGHT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))
-#define DE_RBRC (DE_RIGHT_BRACE)
-
-/* ~ */
 #define DE_TILDE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
-
-/* § */
 #define DE_SECTION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))
-#define DE_SECT (DE_SECTION)
-
-/* ° */
 #define DE_DEGREE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))
-#define DE_DEG (DE_DEGREE)
-
-/* ² */
 #define DE_SUPER2 (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
-#define DE_SQUARE (DE_SUPER2)
-
-/* ³ */
 #define DE_SUPER3 (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))
-#define DE_CUBE (DE_SUPER3)
-
-/* ´ */
 #define DE_ACUTE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS))
-
-/* µ */
-// #define DE_MU (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_M)))
-// #define DE_MICRO (DE_MU)
-
-/* ß */
-// #define DE_SHARP_S (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))
-
-/* ẞ */
 #define DE_SHARP_S (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))))
-
-/* ä */
 #define DE_A_UMLAUT (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))
-
-/* ö */
 #define DE_O_UMLAUT (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))
-
-/* ü */
 #define DE_U_UMLAUT (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))
-
-/* € */
 #define DE_EURO (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_E)))
 // < German umlauts and special characters
 
@@ -390,7 +194,6 @@
 
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -400,33 +203,19 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
         
-        // lhr: left_positional_hold_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-unless-interrupted";
-        //     tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-        //     quick-tap-ms = <200>;
-        //     bindings = <&kp>, <&kp>;
-        //
-        //     hold-trigger-key-positions = <41 42 43 44>;    // <---[[right-hand keys]]
-        // };
-        //
-        // rhr: right_positional_hold_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-unless-interrupted";
-        //     tapping-term-ms = <100>;
-        //     quick-tap-ms = <200>;
-        //     bindings = <&kp>, <&kp>;
-        //
-        //     hold-trigger-key-positions = <35 36 37 38>;  // Only triggers when left-hand keys are pressed
-        // };
+        mx: mx {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
     };
 
 macros {
@@ -439,12 +228,74 @@ macros {
  
         // German umlauts and special characters
 
-        de_ae: de_ae { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_A_UMLAUT>; };
-        de_ss: de_ss { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_SHARP_S>; };
-        de_oe: de_oe { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_O_UMLAUT>; };
-        de_ue: de_ue { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_U_UMLAUT>; };
-        de_eur: de_eur { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_EURO>; };
+        de_ae: de_ae { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_A_UMLAUT>; };  // ä
+        de_ss: de_ss { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_SHARP_S>; };  // ß
+        de_oe: de_oe { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_O_UMLAUT>; };  // ö
+        de_ue: de_ue { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_U_UMLAUT>; };  // ü
+        de_eur: de_eur { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_EURO>; };  // €
+        de_sect: de_sect { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_SECTION>; };  // §
+        de_deg: de_deg { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_DEGREE>; };  // °
+        de_square: de_square { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_SUPER2>; };  // ²
+        de_cube: de_cube { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_SUPER3>; };  // ³
+        de_acute: de_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_ACUTE>; };  // ´
+        de_y: de_y { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_Y>; };  // y (on German layout)
+        de_z: de_z { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_Z>; };  // z (on German layout)
+        de_excl: de_excl { compatible =   "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_EXCLAMATION>; };  // !
+        de_dollar: de_dollar { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_DOLLAR>; };  // $
+        de_percent: de_percent { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_PERCENT>; };  // %
+        de_plus: de_plus { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_PLUS>; };  // +
+        de_comma: de_comma { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_COMMA>; };  // ,
+        de_minus: de_minus { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_MINUS>; };  // -
+        de_period: de_period { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_PERIOD>; };  // .
+        de_colon: de_colon { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_COLON>; };  // :
+        de_semi: de_semi { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_SEMICOLON>; };  // ;
+        de_caret: de_caret { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_CARET>; };  // ^
+        de_under: de_under { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_UNDERSCORE>; };  // _
+        de_grave: de_grave { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_GRAVE>; };  // `
 
+        de_lt: de_lt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_LESS_THAN>; };  // <
+        de_gt: de_gt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_GREATER_THAN>; };  // >
+        de_lbkt: de_lbkt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_LEFT_BRACKET>; };  // [
+        de_rbkt: de_rbkt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_RIGHT_BRACKET>; };  // ]
+        de_lbrc: de_lbrc { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_LEFT_BRACE>; };  // {
+        de_rbrc: de_rbrc { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_RIGHT_BRACE>; };  // }
+        de_lpar: de_lpar { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_LEFT_PARENTHESIS>; };  // (
+        de_rpar: de_rpar { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_RIGHT_PARENTHESIS>; };  // )
+
+        de_squot: de_squot { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_SINGLE_QUOTE>; };  // '
+        de_dquot: de_dquot { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_DOUBLE_QUOTES>; }; // 
+
+        de_slash: de_slash { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_SLASH>; };  // /
+        de_bslash: de_bslash { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_BACKSLASH>; };  // \
+
+        de_quest: de_quest { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_QUESTION>; };  // ?
+        de_amp: de_amp { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_AMPERSAND>; };  // &
+        de_eq: de_eq { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_EQUAL>; };  // =
+        de_at: de_at { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_AT_SIGN>; };  // @
+        de_ast: de_ast { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_ASTERISK>; };  // *
+        de_hash: de_hash { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_HASH>; };  // #
+        de_pipe: de_pipe { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_PIPE>; };  // |
+        de_tilde: de_tilde { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DE_TILDE>; };  // ~
+
+        // hm_de_under: hm_de_under { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&hm RSHFT DE_MINUS>; };  // _
+        
+        // Number keys
+        // de_n0: de_n0 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N0>; };  // 0
+        // de_n1: de_n1 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N1>; };  // 1
+        // de_n2: de_n2 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N2>; };  // 2
+        // de_n3: de_n3 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N3>; };  // 3
+        // de_n4: de_n4 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N4>; };  // 4
+        // de_n5: de_n5 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N5>; };  // 5
+        // de_n6: de_n6 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N6>; };  // 6
+        // de_n7: de_n7 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N7>; };  // 7
+        // de_n8: de_n8 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N8>; };  // 8
+        // de_n9: de_n9 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_N9>; };  // 9
+
+        // Special control characters
+        // de_esc_char: de_esc_char { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_ESCAPE_CHARACTER>; };  // Escape character
+        // de_file_sep: de_file_sep { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_FILE_SEPARATOR>; };  // File separator
+        // de_group_sep: de_group_sep { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_GROUP_SEPARATOR>; };  // Group separator
+        // de_space: de_space { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_press &kp DE_SPACE>; };  // Space
 
         // alt_x: alt_x {
         //     label = "ALT_X";
@@ -560,171 +411,125 @@ macros {
 
             bindings = <
                 &kp F1      &kp F2         &kp F3       &kp F4       &kp F5                                                                                                                 &kp F6        &kp F7       &kp F8          &kp F9                 &kp F10
-                &kp ESC     &kp N1         &kp N2       &kp N3       &kp N4          &kp N5                                                                                         &kp N6  &kp N7        &kp N8       &kp N9          &kp N0                 &none
-                &kp TAB     &kp Q          &kp W        &kp E        &lt FUNCTION R  &kp T                                                                                          &kp Y   &kp U         &kp I        &kp O           &kp P                  &kp DEL
-                &kp ESC     &hm LSHFT A    &hm LGUI S  &hm LALT D  &hm LCTRL F    &kp G                                                                                          &kp H   &hm RCTRL J  &hm RALT K  &hm RGUI L     &hm RSHFT HASH        &none
-                &none       &kp DE_A_UMLAUT       &kp X        &kp C        &lt 2 V         &kp B   &kp LSHFT      &kp LCTRL      &bootloader    &bootloader  &none  &kp RCTRL    &kp N   &lt 1 M       &kp COMMA    &kp DOT         &kp UP                 &none
-                &magic 8 0  &none          &none        &none        &mo 5                   &mt RSHFT TAB  &mt LCTRL ESC  &kp LALT       &kp RALT     &lt MACRO2 RET  &lt 6 SPACE          &mo 3         &none        &kp LEFT        &kp DOWN               &kp RIGHT
+                &kp ESC     &kp N1         &kp N2       &kp N3       &kp N4          &kp N5                                                                                         &kp N6  &kp N7        &kp N8       &kp N9          &kp N0                 &trans
+                &kp TAB     &kp Q          &kp W        &kp E        &lt FUNCTION R  &kp T                                                                                          &de_z   &kp U         &kp I        &kp O           &kp P                  &kp DEL
+                &kp ESC     &hm LSHFT A    &hm LGUI S   &hm LALT D  &hm LCTRL F      &kp G                                                                                          &kp H   &hm RCTRL J   &hm RALT K   &hm RGUI L      &trans                  &de_hash
+                &trans       &de_y          &kp X        &kp C        &lt 2 V         &kp B   &kp LSHFT      &kp LCTRL      &bootloader    &bootloader  &trans            &kp RCTRL  &kp N   &lt 1 M       &kp COMMA    &kp DOT         &kp UP                 &trans
+                &magic 8 0  &trans          &trans        &trans        &mo 5                   &mt RSHFT ESC  &mt LCTRL TAB  &kp LALT       &kp RALT     &lt MACRO2 SPACE  &lt 6 RET          &trans        &trans        &kp LEFT        &kp DOWN               &kp RIGHT
             >;
         };
 
-        //   [1] = LAYOUT_voyager(
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_1,     ST_MACRO_2,     ST_MACRO_3,     KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, DE_AT,          DE_HASH,        DE_LPRN,        DE_DLR,         DE_SLSH,                                        DE_QST,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_4,     KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, DE_AE,          DE_SS,          DE_LCBR,        DE_QUOT,        DE_CIRC,                                        KC_HOME,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, DE_LESS,        DE_TILD,        DE_LBRC,        DE_DQOT,        DE_PIPE,                                        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_5,     KC_TRANSPARENT, 
-        //                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-        //   ),
-
+// 1
 symbols_primary_layer {
-            // |  #1      |  #2         |  #3          |  #4            |  #5            |  #6          |  #7       |  #8       |  #9       |  #10      |  #11    |  #12        |  #13          |  #14          |  #15           |  #16          |  #17          |  #18    |
+            // |  #1      |  #2         |  #3          |  #4       |  #5            |  #6          |  #7       |  #8       |  #9       |  #10      |  #11    |  #12        |  #13          |  #14          |  #15           |  #16          |  #17          |  #18    |
 
             bindings = <
-              &trans  &trans  &trans    &trans                &trans                                                                                  &trans  &trans    &trans  &trans  &trans
-              &trans  &trans  &kp HASH  &kp LEFT_PARENTHESIS  &kp DOLLAR         &kp SLASH                                                    &none   &none   &trans    &trans  &trans  &trans
-              &trans  &de_ae  &de_ss    &kp LEFT_BRACE        &kp SINGLE_QUOTE   &kp CARET                                                    &none   &de_ue  &kp HOME  &de_oe  &trans  &trans
-              &trans  &kp AT  &kp TILDE &kp LEFT_BRACKET      &kp DOUBLE_QUOTES  &kp PIPE                                                     &none   &none   &none     &trans  &de_eur &trans
-              &trans  &trans  &trans    &kp LESS_THAN         &trans             &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans
-              &trans  &trans  &trans    &trans                &trans                        &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans    &trans  &trans  &trans
+              &trans  &trans    &trans    &trans       &trans                                                                         &trans   &trans      &trans  &trans   &trans
+              &trans  &trans    &trans    &trans       &trans         &de_slash                                                &trans  &trans   &trans      &trans  &trans   &trans
+              &trans  &de_ae   &de_ss   &trans       &trans         &de_bslash                                               &trans  &de_ue  &trans      &de_oe &trans   &trans
+              &trans  &trans    &de_lt   &de_lbkt    &de_lbrc      &de_lpar                                                 &trans  &trans   &de_squot  &trans  &de_eur &trans
+              &trans  &trans    &de_gt   &de_rbkt    &de_rbrc      &de_rpar   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &de_dquot  &trans  &trans   &trans
+              &trans  &trans    &trans    &trans       &trans                   LA(N1)  LA(N2)  LA(N3)    &trans  &trans  &trans         &trans   &trans      &trans  &trans   &trans
             >;
         };
 
-        //   [2] = LAYOUT_voyager(
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 DE_QST,         DE_UE,          KC_UP,          DE_OE,          ST_MACRO_6,     KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_HOME,        KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_END,         KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_7,     KC_TRANSPARENT, 
-        //                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-        //   ),
-
+// 2
 navigation_layer {
             // |  #1        |  #2          |  #3            |  #4          |  #5            |  #6           |  #7       |  #8       |  #9       |  #10      |  #11     |  #12         |  #13          |  #14          |  #15          |  #16         |  #17          |  #18    |
 
             bindings = <
-                &trans   &trans  &trans  &trans  &trans                                                                          &trans    &trans    &trans     &trans    &trans
-                &trans   &trans  &trans  &trans  &trans  &trans                                                    &kp QUESTION  &de_ue    &kp UP    &de_oe     &trans    &trans
-                &trans   &trans  &trans  &trans  &trans  &trans                                                    &kp HOME      &kp LEFT  &kp DOWN  &kp RIGHT  &kp END   &trans
-                &kp END  &trans  &trans  &trans  &trans  &trans                                                    &trans        &trans    &trans    &trans     &trans    &trans
-                &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans        &trans    &trans    &trans     &trans    &trans
-                &trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans                &trans    &trans    &trans     &trans    &trans
+                &trans   &trans  &trans  &trans  &trans                                                                     &trans    &trans    &trans     &trans    &trans
+                &trans   &trans  &trans  &trans  &trans  &trans                                                 &trans        &trans    &trans    &trans     &trans    &trans
+                &trans   &trans  &trans  &trans  &trans  &trans                                                 &de_quest    &de_ue   &kp UP   &de_oe    &trans    &trans
+                &trans   &trans  &trans  &trans  &trans  &trans                                                 &kp HOME     &kp LEFT &kp DOWN &kp RIGHT &kp END  &trans
+                &trans   &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans   &trans   &trans  &trans        &trans    &trans    &trans     &trans    &trans
+                &trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans    LG(N1)  LG(N2)  LG(N3)              &trans    &trans    &trans     &trans    &trans
             >;
         };
 
-        //   [3] = LAYOUT_voyager(
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DE_RPRN,        DE_AMPR,        DE_BSLS,                                        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DE_RCBR,        DE_ASTR,        DE_GRV,                                         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, DE_MORE,        KC_TRANSPARENT, DE_RBRC,        KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-        //   ),
-
+// 3
 symbols_secondary_layer {
             // |  #1        |  #2          |  #3            |  #4           |  #5           |  #6            |  #7       |  #8       |  #9       |  #10     |  #11     |  #12         |  #13          |  #14          |  #15          |  #16         |  #17          |  #18    |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp AMPERSAND   &kp BACKSLASH                                                     &none   &trans  &trans  &trans  &kp PERCENT  &trans
-&trans  &trans  &trans  &kp RIGHT_BRACE        &kp ASTERISK    &kp GRAVE                                                     &none   &none   &trans  &trans  &trans  &trans
-&trans  &kp GREATER_THAN  &trans  &kp RIGHT_BRACKET  &none   &trans                                                    &none   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                            &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans    &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        //   [4] = LAYOUT_voyager(
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DE_PERC,        KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DE_RPRN,        DE_AMPR,        DE_BSLS,                                        KC_PSCR,        KC_7,           KC_8,           KC_9,           KC_KP_MINUS,    KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DE_RCBR,        DE_ASTR,        DE_GRV,                                         KC_TRANSPARENT, KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, DE_MORE,        KC_TRANSPARENT, DE_RBRC,        KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_0,           KC_1,           KC_2,           KC_3,           KC_KP_EQUAL,    KC_TRANSPARENT, 
-        //                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-        //   ),
-
+        // 4
         numpad_layer {
             // |  #1        |  #2          |  #3            |  #4           |  #5            |  #6          |  #7       |  #8      |  #9       |  #10     |  #11     |  #12         |  #13          |  #14          |  #15          |  #16          |  #17          |  #18    |
 
             bindings = <
-&none     &none   &none   &none   &none                                                            &none         &none         &none         &none  &none
-&trans    &none   &none   &none   &none  &none                                              &none  &kp PSCRN     &none         &none         &none  &none
-&none     &trans  &none   &none   &none  &none                                              &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none
-&kp PLUS  &none   &trans  &none   &none  &none                                              &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
-&none     &none   &none   &trans  &none  &none  &none  &none  &none    &none  &none  &none  &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-&none     &none   &none   &trans  &none         &none  &none  &none    &none  &none  &none         &none         &kp NUMBER_0  &none         &none  &none
+&trans     &trans   &trans   &trans   &trans                                                            &trans         &trans         &trans         &trans  &trans
+&trans    &trans   &trans   &trans   &trans  &trans                                              &trans  &trans         &trans         &trans         &trans  &trans
+&trans     &trans  &trans   &trans   &trans  &trans                                              &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&trans     &trans   &trans  &trans   &trans  &trans                                              &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans     &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+&trans     &trans   &trans   &trans  &trans         &trans  &trans  &trans    &trans  &trans  &trans         &trans         &kp NUMBER_0  &trans         &trans  &trans
             >;
         };
 
-        //   [5] = LAYOUT_voyager(
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F10,         KC_F11,         KC_F12,         KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F7,          KC_F8,          KC_F9,          KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F4,          KC_F5,          KC_F6,          KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_TRANSPARENT, KC_TRANSPARENT, 
-        //                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-        //   ),
 
+
+        // 5
         function_layer {
             // |  #1        |  #2          |  #3            |  #4           |  #5            |  #6          |  #7       |  #8      |  #9       |  #10     |  #11     |  #12         |  #13          |  #14          |  #15          |  #16          |  #17          |  #18    |
 
             bindings = <
-&none   &none  &none  &none  &none                                                            &none  &kp F10  &kp F11  &kp F12  &none
-&none   &none  &none  &none  &none  &none                                              &none  &none  &kp F7   &kp F8   &kp F9   &none
-&none   &none  &none  &none  &none  &none                                              &none  &none  &none    &kp F4   &kp F5   &kp F6
-&none   &none  &none  &none  &none  &none                                              &none  &none  &none    &none    &kp F1   &kp F2
-&kp F3  &none  &none  &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none    &none    &none    &none
-&none   &none  &none  &none  &none         &none  &none  &none    &none  &none  &none         &none  &none    &none    &none    &none
+&trans   &trans  &trans  &trans  &trans                                                            &trans         &trans         &trans         &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans                                              &trans  &kp F10       &kp F11       &kp F12       &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans                                              &trans  &kp F7        &kp F8        &kp F9        &trans   &trans 
+&trans   &trans  &trans  &trans  &trans  &trans                                              &trans  &kp F4        &kp F5        &kp F6        &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp F1        &kp F2        &kp F3        &trans   &trans
+&trans   &trans  &trans  &trans  &trans         &trans  &trans  &trans    &trans  &trans  &trans         &trans         &trans         &trans         &trans   &trans
             >;
         };
 
-        //   [6] = LAYOUT_voyager(
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_8,     ST_MACRO_9,     ST_MACRO_10,    KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_11,    ST_MACRO_12,    ST_MACRO_13,    KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_14,    ST_MACRO_15,    ST_MACRO_16,    KC_TRANSPARENT, KC_TRANSPARENT, 
-        //                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-        //   ),
-
+        // 6
         macro1_layer {
             // |  #1        |  #2          |  #3            |  #4           |  #5            |  #6          |  #7       |  #8      |  #9       |  #10     |  #11     |  #12         |  #13          |  #14          |  #15          |  #16          |  #17          |  #18    |
 
             bindings = <
-&none       &none  &none  &none  &none                                                            &none  &none       &none       &none       &none
-&none       &none  &none  &none  &none  &none                                              &none  &none  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &none
-&none       &none  &none  &none  &none  &none                                              &none  &none  &none       &kp LG(N4)  &kp LG(N5)  &kp LG(N6)
-&none       &none  &none  &none  &none  &none                                              &none  &none  &none       &none       &kp LG(N1)  &kp LG(N2)
-&kp LG(N3)  &none  &none  &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none       &none       &none       &none
-&none       &none  &none  &none  &none         &none  &none  &none    &none  &none  &none         &none  &none       &none       &none       &none
+&trans       &trans  &trans  &trans  &trans                                                            &trans  &trans       &trans       &trans       &trans
+&trans       &trans  &trans  &trans  &trans  &trans                                              &trans  &trans  &trans       &trans       &trans       &trans
+&trans       &trans  &trans  &trans  &trans  &trans                                              &trans  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans                                              &trans  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &trans  &trans
+&trans       &trans  &trans  &trans  &trans         &trans  &trans  &trans    &trans  &trans  &trans         &trans       &trans       &trans       &trans  &trans
             >;
         };
 
-        //   [7] = LAYOUT_voyager(
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_17,    ST_MACRO_18,    ST_MACRO_19,    KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_20,    ST_MACRO_21,    ST_MACRO_22,    KC_TRANSPARENT, KC_TRANSPARENT, 
-        //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_23,    ST_MACRO_24,    ST_MACRO_25,    KC_TRANSPARENT, KC_TRANSPARENT, 
-        //                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-        //   ),
-
+        // 7
         macro2_layer {
             // |  #1        |  #2          |  #3            |  #4           |  #5            |  #6          |  #7       |  #8      |  #9       |  #10     |  #11     |  #12         |  #13          |  #14          |  #15          |  #16          |  #17          |  #18    |
 
             bindings = <
-&none       &none  &none  &none  &none                                                            &none  &none       &none       &none       &none
-&none       &none  &none  &none  &none  &none                                              &none  &none  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &none
-&none       &none  &none  &none  &none  &none                                              &none  &none  &none       &kp LA(N4)  &kp LA(N5)  &kp LA(N6)
-&none       &none  &none  &none  &none  &none                                              &none  &none  &none       &none       &kp LA(N1)  &kp LA(N2)
-&kp LA(N3)  &none  &none  &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none       &none       &none       &none
-&none       &none  &none  &none  &none         &none  &none  &none    &none  &none  &none         &none  &none       &none       &none       &none
+&trans       &trans  &trans  &trans  &trans                                                            &trans  &trans       &trans       &trans       &trans
+&trans       &trans  &trans  &trans  &trans  &trans                                              &trans  &trans  &trans       &trans       &trans       &trans
+&trans       &trans  &trans  &trans  &trans  &trans                                              &trans  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans                                              &trans  &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &trans  &trans
+&trans       &trans  &trans  &trans  &trans         &trans  &trans  &trans    &trans  &trans  &trans         &trans       &trans       &trans       &trans  &trans
             >;
         };
 
+        // 8
         magic_layer {
             // |  #1        |  #2                |  #3            |  #4           |  #5            |  #6           |  #7       |  #8      |  #9           |  #10     |  #11     |  #12     |  #13     |  #14     |  #15     |  #16     |  #17     |  #18    |
 
             bindings = <
-&bt BT_CLR   &none            &none            &none            &none                                                                                       &none  &none  &none  &none  &bt BT_CLR_ALL
-&none        &none            &none            &none            &none            &none                                                               &none  &none  &none  &none  &none  &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &none  &none  &none  &none  &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &none  &none  &none  &none  &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none  &none  &none  &none  &none
+&bt BT_CLR   &trans            &trans            &trans            &trans                                                                                       &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+&trans        &trans            &trans            &trans            &trans            &trans                                                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &trans  &trans  &trans  &trans  &trans  &bootloader
+&sys_reset   &trans            &trans            &trans            &trans            &trans            &bt_2  &bt_3  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &sys_reset
+&trans        &trans            &trans            &trans            &trans                             &bt_0  &bt_1  &out OUT_USB    &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

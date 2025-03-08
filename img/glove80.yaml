@@ -29,7 +29,7 @@ layers:
   - E
   - {t: R, h: function}
   - T
-  - Y
+  - z
   - U
   - I
   - O
@@ -45,10 +45,10 @@ layers:
   - {t: J, h: Ctrl}
   - {t: K, h: AltGr}
   - {t: L, h: RGUI}
-  - {t: £, h: '$$mdi:apple-keyboard-shift$$'}
+  - '&hm_de_under'
+  - '#'
   - ''
-  - ''
-  - (ZMK HID USAGE(HID USAGE KEY HID USAGE KEY KEYBOARD APOSTROPHE AND QUOTE))
+  - y
   - X
   - C
   - {t: V, h: navigation}
@@ -70,13 +70,13 @@ layers:
   - ''
   - ''
   - function
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: Esc, h: Ctrl}
+  - {t: Esc, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: Ctrl}
   - Alt
   - AltGr
-  - {t: '$$mdi:keyboard-return$$', h: macro2}
-  - {t: '$$mdi:keyboard-space$$', h: macro1}
-  - symbols_secondary
+  - {t: '$$mdi:keyboard-space$$', h: macro2}
+  - {t: '$$mdi:keyboard-return$$', h: macro1}
+  - {t: symbols_secondary, h: F22}
   - ''
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -105,28 +105,28 @@ layers:
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
-  - '&de_ae'
-  - '&de_ss'
+  - ä
+  - ß
   - '{'
   - ''''
   - ^
   - ''
-  - '&de_ue'
+  - ü
   - Home
-  - '&de_oe'
+  - ö
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - '"'
   - ¬
   - '['
-  - '@'
+  - '"'
   - '~'
   - ''
   - ''
   - ''
   - {t: '$$mdi:chevron-down$$', type: trans}
-  - '&de_euro'
+  - €
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
@@ -179,10 +179,22 @@ layers:
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
+  - {t: '$$mdi:chevron-down$$', type: trans}
   - '?'
-  - '&de_ue'
+  - ü
   - $$mdi:arrow-up-bold$$
-  - '&de_oe'
+  - ö
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
@@ -196,18 +208,6 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - End
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - End
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
-  - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
   - {t: '$$mdi:chevron-down$$', type: trans}
